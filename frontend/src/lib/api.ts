@@ -1,4 +1,14 @@
-import type { Dashboard, SignupResult, Teacher, TeacherSort, Token, UserAccount } from "./types";
+import type {
+  Dashboard,
+  PlacementAnswer,
+  PlacementQuestion,
+  PlacementResult,
+  SignupResult,
+  Teacher,
+  TeacherSort,
+  Token,
+  UserAccount,
+} from "./types";
 
 // Browser code talks to the public URL; server-side rendering can use an internal URL.
 const BROWSER_BASE = process.env.NEXT_PUBLIC_API_URL ?? "http://localhost:8000/api";
@@ -75,4 +85,10 @@ export const api = {
     const qs = search.toString();
     return apiFetch<Teacher[]>(`/teachers${qs ? `?${qs}` : ""}`, { cache: "no-store" });
   },
+
+  placementQuestions: () =>
+    apiFetch<PlacementQuestion[]>("/placement/questions", { cache: "no-store" }),
+
+  submitPlacement: (answers: PlacementAnswer[]) =>
+    apiFetch<PlacementResult>("/placement/submit", { method: "POST", body: { answers } }),
 };

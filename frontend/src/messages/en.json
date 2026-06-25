@@ -92,5 +92,59 @@
   },
   "language": {
     "label": "Language"
+  },
+  "pages": {
+    "teachers": {
+      "title": "Find a teacher",
+      "subtitle": "Browse tutors and filter by language.",
+      "all": "All languages",
+      "results": "{count} teachers"
+    },
+    "messages": {
+      "title": "Messages",
+      "subtitle": "Your conversations with teachers.",
+      "you": "You"
+    },
+    "materials": {
+      "title": "Materials",
+      "subtitle": "Lesson materials and resources.",
+      "empty": "No materials yet — your teacher will share resources here after your next lesson.",
+      "cta": "Find a teacher"
+    },
+    "community": {
+      "title": "Community",
+      "subtitle": "Tips and questions from fellow learners.",
+      "newPost": "New post",
+      "replies": "{count} replies"
+    },
+    "settings": {
+      "title": "Settings",
+      "subtitle": "Manage your account and preferences.",
+      "account": "Account",
+      "preferences": "Preferences",
+      "email": "Email",
+      "role": "Role",
+      "status": "Email status",
+      "verified": "Verified",
+      "unverified": "Unverified",
+      "interfaceLanguage": "Interface language",
+      "theme": "Theme",
+      "saved": "Saved"
+    }
+  },
+  "placement": {
+    "title": "AI placement test",
+    "subtitle": "One question at a time. Difficulty adapts as you answer.",
+    "progress": "Question {current} / {total}",
+    "exit": "Exit",
+    "skip": "Skip",
+    "next": "Next",
+    "finish": "See result",
+    "adapting": "Adapting to ~{level}",
+    "choose": "Choose the correct form",
+    "resultTitle": "Your estimated level",
+    "resultBody": "Based on your answers, we placed you around {level}. We'll use this to match you with the right teachers.",
+    "resultCta": "Find teachers",
+    "restart": "Retake test"
   }
 }

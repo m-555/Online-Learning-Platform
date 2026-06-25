@@ -92,5 +92,59 @@
   },
   "language": {
     "label": "Sprooch"
+  },
+  "pages": {
+    "teachers": {
+      "title": "E Proff fannen",
+      "subtitle": "Kuck duerch d'Proffen a filter no Sprooch.",
+      "all": "All Sproochen",
+      "results": "{count} Proffen"
+    },
+    "messages": {
+      "title": "Noriichten",
+      "subtitle": "Deng Gespréicher mat de Proffen.",
+      "you": "Du"
+    },
+    "materials": {
+      "title": "Material",
+      "subtitle": "Coursmaterial a Ressourcen.",
+      "empty": "Nach kee Material — däi Proff deelt no dengem nächste Cours hei Ressourcen.",
+      "cta": "E Proff fannen"
+    },
+    "community": {
+      "title": "Communautéit",
+      "subtitle": "Tipps a Froe vun anere Léierender.",
+      "newPost": "Neie Post",
+      "replies": "{count} Äntwerten"
+    },
+    "settings": {
+      "title": "Astellungen",
+      "subtitle": "Verwalt däi Kont an deng Präferenzen.",
+      "account": "Kont",
+      "preferences": "Präferenzen",
+      "email": "E-Mail",
+      "role": "Roll",
+      "status": "E-Mail-Status",
+      "verified": "Verifizéiert",
+      "unverified": "Net verifizéiert",
+      "interfaceLanguage": "Interface-Sprooch",
+      "theme": "Theema",
+      "saved": "Gespäichert"
+    }
+  },
+  "placement": {
+    "title": "AI-Astufungstest",
+    "subtitle": "Eng Fro no der anerer. D'Schwieregkeet passt sech un.",
+    "progress": "Fro {current} / {total}",
+    "exit": "Verloossen",
+    "skip": "Iwwersprangen",
+    "next": "Weider",
+    "finish": "Resultat weisen",
+    "adapting": "Upassung op ~{level}",
+    "choose": "Wiel déi richteg Form",
+    "resultTitle": "Däin geschaten Niveau",
+    "resultBody": "Op Basis vun dengen Äntwerten setze mir dech ronderëm {level}. Mir benotzen dat fir dech mat de richtege Proffen ze verbannen.",
+    "resultCta": "Proffen fannen",
+    "restart": "Test nei maachen"
   }
 }

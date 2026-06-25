@@ -44,7 +44,7 @@ export default async function LandingPage() {
               {t("heroSubtitle")}
             </p>
             <div className="mt-7 flex flex-wrap gap-3">
-              <a href="#" className={buttonClasses("primary", "lg")}>
+              <a href="/placement" className={buttonClasses("primary", "lg")}>
                 {t("ctaPrimary")}
               </a>
               <a href="#teachers" className={buttonClasses("secondary", "lg")}>

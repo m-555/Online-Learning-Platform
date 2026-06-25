@@ -1,0 +1,202 @@
+[
+  {
+    "text": "Choose the correct meaning of the word 'apple'.",
+    "skill": "vocab",
+    "option_a": "A fruit",
+    "option_b": "A vehicle",
+    "option_c": "A tool",
+    "option_d": "A color",
+    "correct_option": "A",
+    "difficulty": -2.0
+  },
+  {
+    "text": "Select the correct sentence: _____ she like pizza?",
+    "skill": "grammar",
+    "option_a": "Do",
+    "option_b": "Does",
+    "option_c": "Is",
+    "option_d": "Are",
+    "correct_option": "B",
+    "difficulty": -1.0
+  },
+  {
+    "text": "Listen: 'The cat is sleeping on the sofa.' What is the cat doing?",
+    "skill": "listening",
+    "option_a": "Running",
+    "option_b": "Sleeping",
+    "option_c": "Eating",
+    "option_d": "Jumping",
+    "correct_option": "B",
+    "difficulty": 0.0
+  },
+  {
+    "text": "Read the sentence: 'She has been working all day.' What tense is this?",
+    "skill": "reading",
+    "option_a": "Present Perfect Continuous",
+    "option_b": "Past Simple",
+    "option_c": "Future Perfect",
+    "option_d": "Present Simple",
+    "correct_option": "A",
+    "difficulty": 1.0
+  },
+  {
+    "text": "Choose the synonym of 'quick'.",
+    "skill": "vocab",
+    "option_a": "Fast",
+    "option_b": "Slow",
+    "option_c": "Lazy",
+    "option_d": "Weak",
+    "correct_option": "A",
+    "difficulty": -1.0
+  },
+  {
+    "text": "Fill in the blank: She _____ to the store yesterday.",
+    "skill": "grammar",
+    "option_a": "go",
+    "option_b": "went",
+    "option_c": "gone",
+    "option_d": "going",
+    "correct_option": "B",
+    "difficulty": 0.0
+  },
+  {
+    "text": "Listen: 'They are playing football outside.' What are they doing?",
+    "skill": "listening",
+    "option_a": "Playing football",
+    "option_b": "Sleeping",
+    "option_c": "Eating",
+    "option_d": "Studying",
+    "correct_option": "A",
+    "difficulty": 0.0
+  },
+  {
+    "text": "Read the sentence: 'If I were rich, I would travel the world.' What mood is used?",
+    "skill": "reading",
+    "option_a": "Indicative",
+    "option_b": "Imperative",
+    "option_c": "Subjunctive",
+    "option_d": "Interrogative",
+    "correct_option": "C",
+    "difficulty": 2.0
+  },
+  {
+    "text": "Choose the antonym of 'happy'.",
+    "skill": "vocab",
+    "option_a": "Sad",
+    "option_b": "Joyful",
+    "option_c": "Excited",
+    "option_d": "Glad",
+    "correct_option": "A",
+    "difficulty": -1.0
+  },
+  {
+    "text": "Identify the error: 'He don't like coffee.'",
+    "skill": "grammar",
+    "option_a": "'He' should be 'She'",
+    "option_b": "'don't' should be 'doesn't'",
+    "option_c": "'like' should be 'likes'",
+    "option_d": "No error",
+    "correct_option": "B",
+    "difficulty": 0.0
+  },
+  {
+    "text": "Listen: 'I have two brothers and one sister.' How many siblings does the speaker have?",
+    "skill": "listening",
+    "option_a": "One",
+    "option_b": "Two",
+    "option_c": "Three",
+    "option_d": "None",
+    "correct_option": "C",
+    "difficulty": -1.0
+  },
+  {
+    "text": "Read the passage and answer: What is the main idea of the text?",
+    "skill": "reading",
+    "option_a": "Technology is harmful",
+    "option_b": "Technology improves life",
+    "option_c": "Technology has no impact",
+    "option_d": "Technology is confusing",
+    "correct_option": "B",
+    "difficulty": 1.0
+  },
+  {
+    "text": "Choose the correct word: 'She is _____ doctor.'",
+    "skill": "grammar",
+    "option_a": "a",
+    "option_b": "an",
+    "option_c": "the",
+    "option_d": "no article",
+    "correct_option": "A",
+    "difficulty": -2.0
+  },
+  {
+    "text": "Choose the meaning of the idiom: 'Break the ice.'",
+    "skill": "vocab",
+    "option_a": "Start a conversation",
+    "option_b": "Make a mess",
+    "option_c": "Get angry",
+    "option_d": "Stop talking",
+    "correct_option": "A",
+    "difficulty": 1.0
+  },
+  {
+    "text": "Listen carefully: 'The meeting starts at 3 PM.' When does the meeting start?",
+    "skill": "listening",
+    "option_a": "At 3 AM",
+    "option_b": "At 3 PM",
+    "option_c": "At 2 PM",
+    "option_d": "At 4 PM",
+    "correct_option": "B",
+    "difficulty": -1.0
+  },
+  {
+    "text": "Read: 'Despite the rain, they went out.' What does 'despite' indicate?",
+    "skill": "reading",
+    "option_a": "Cause",
+    "option_b": "Contrast",
+    "option_c": "Result",
+    "option_d": "Time",
+    "correct_option": "B",
+    "difficulty": 1.0
+  },
+  {
+    "text": "Fill in the blank: I _____ finished my homework.",
+    "skill": "grammar",
+    "option_a": "have",
+    "option_b": "has",
+    "option_c": "had",
+    "option_d": "having",
+    "correct_option": "A",
+    "difficulty": 0.0
+  },
+  {
+    "text": "Choose the synonym of 'difficult'.",
+    "skill": "vocab",
+    "option_a": "Easy",
+    "option_b": "Hard",
+    "option_c": "Simple",
+    "option_d": "Light",
+    "correct_option": "B",
+    "difficulty": 0.0
+  },
+  {
+    "text": "Listen: 'She is reading a book.' What is she doing?",
+    "skill": "listening",
+    "option_a": "Writing",
+    "option_b": "Reading",
+    "option_c": "Sleeping",
+    "option_d": "Talking",
+    "correct_option": "B",
+    "difficulty": -2.0
+  },
+  {
+    "text": "Read the sentence: 'They will have finished by tomorrow.' What tense is this?",
+    "skill": "reading",
+    "option_a": "Future Perfect",
+    "option_b": "Past Perfect",
+    "option_c": "Present Continuous",
+    "option_d": "Simple Future",
+    "correct_option": "A",
+    "difficulty": 2.0
+  }
+]

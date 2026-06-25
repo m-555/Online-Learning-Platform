@@ -66,3 +66,28 @@ export interface Dashboard {
 }
 
 export type TeacherSort = "top_rated" | "price_low" | "price_high";
+
+export interface PlacementOption {
+  key: string;
+  text: string;
+}
+
+export interface PlacementQuestion {
+  id: number;
+  text: string;
+  skill: string;
+  difficulty: number;
+  options: PlacementOption[];
+}
+
+export interface PlacementAnswer {
+  question_id: number;
+  choice: string;
+}
+
+export interface PlacementResult {
+  level: string;
+  theta: number;
+  correct: number;
+  total: number;
+}

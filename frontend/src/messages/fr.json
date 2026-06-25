@@ -92,5 +92,59 @@
   },
   "language": {
     "label": "Langue"
+  },
+  "pages": {
+    "teachers": {
+      "title": "Trouver un professeur",
+      "subtitle": "Parcourez les tuteurs et filtrez par langue.",
+      "all": "Toutes les langues",
+      "results": "{count} professeurs"
+    },
+    "messages": {
+      "title": "Messages",
+      "subtitle": "Vos conversations avec les professeurs.",
+      "you": "Vous"
+    },
+    "materials": {
+      "title": "Supports",
+      "subtitle": "Supports et ressources de cours.",
+      "empty": "Aucun support pour l'instant — votre professeur partagera des ressources ici après votre prochain cours.",
+      "cta": "Trouver un professeur"
+    },
+    "community": {
+      "title": "Communauté",
+      "subtitle": "Conseils et questions d'autres apprenants.",
+      "newPost": "Nouveau message",
+      "replies": "{count} réponses"
+    },
+    "settings": {
+      "title": "Paramètres",
+      "subtitle": "Gérez votre compte et vos préférences.",
+      "account": "Compte",
+      "preferences": "Préférences",
+      "email": "E-mail",
+      "role": "Rôle",
+      "status": "Statut de l'e-mail",
+      "verified": "Vérifié",
+      "unverified": "Non vérifié",
+      "interfaceLanguage": "Langue de l'interface",
+      "theme": "Thème",
+      "saved": "Enregistré"
+    }
+  },
+  "placement": {
+    "title": "Test de niveau IA",
+    "subtitle": "Une question à la fois. La difficulté s'adapte à vos réponses.",
+    "progress": "Question {current} / {total}",
+    "exit": "Quitter",
+    "skip": "Passer",
+    "next": "Suivant",
+    "finish": "Voir le résultat",
+    "adapting": "Adaptation à ~{level}",
+    "choose": "Choisissez la forme correcte",
+    "resultTitle": "Votre niveau estimé",
+    "resultBody": "D'après vos réponses, nous vous situons autour de {level}. Nous l'utiliserons pour vous proposer les bons professeurs.",
+    "resultCta": "Trouver des professeurs",
+    "restart": "Refaire le test"
   }
 }
