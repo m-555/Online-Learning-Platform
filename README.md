@@ -23,6 +23,18 @@ progress.
 This repository contains a **Next.js** front end and a **FastAPI** back end sharing a **PostgreSQL**
 database, wired together with Docker Compose and a GitHub Actions CI pipeline.
 
+## Screenshots
+
+![Aula landing page](docs/screenshots/landing.png)
+
+| Student dashboard | AI placement test |
+| --- | --- |
+| ![Student dashboard](docs/screenshots/dashboard.png) | ![AI placement test](docs/screenshots/placement.png) |
+
+| Sign in | Dark mode |
+| --- | --- |
+| ![Sign in](docs/screenshots/auth.png) | ![Dark mode](docs/screenshots/landing-dark.png) |
+
 ## Highlights
 
 - **Design system first** — colour, type, spacing, radius and elevation are defined as design tokens
@@ -57,6 +69,10 @@ database, wired together with Docker Compose and a GitHub Actions CI pipeline.
 | **Landing** | Sticky nav, announcement pill, hero with dual CTAs and social proof, and a grid of top-rated tutors loaded from the API (server-rendered). |
 | **Auth** | A single modal with a Log in / Sign up segmented control, social sign-in stubs, and a calm "check your inbox" verification step. |
 | **Student dashboard** | Persistent sidebar, verify banner, profile/next-class/lessons/messages stats, upcoming classes, an AI recommendation panel, and an AI-matched tutor — all wired to the API, in light and dark. |
+| **Find a teacher** | Browse tutors with a language filter, served from the teachers API. |
+| **AI placement test** | One question at a time with adaptive difficulty; the back end scores answers with a 1PL Rasch (IRT) model and maps the result to a CEFR level. |
+| **Messages · Materials · Community** | In-app pages sharing the authenticated `AppShell` (sidebar + topbar + user menu). |
+| **Settings** | Account details, email-verification status, interface language and theme. |
 
 ## Architecture
 
@@ -64,7 +80,7 @@ database, wired together with Docker Compose and a GitHub Actions CI pipeline.
 .
 ├── frontend/                 # Next.js App Router app
 │   └── src/
-│       ├── app/              # routes: / , /verify , /dashboard
+│       ├── app/              # routes: / , /verify , /dashboard , /teachers , /placement , /settings , …
 │       ├── components/       # ui/ design-system primitives, screen sections
 │       ├── i18n/             # next-intl config + locale cookie
 │       ├── lib/              # typed API client, auth, helpers
@@ -150,12 +166,13 @@ production build.
 
 ## Roadmap
 
-The current build ships the design system and three flagship screens. Planned next:
+The current build ships the design system, the core student experience, and an adaptive placement test.
+Planned next:
 
-- Find-a-teacher marketplace with filters and semantic search
+- Semantic search and richer filters on the find-a-teacher page
 - Live lesson room (video + lesson plan + AI live notes)
 - Teacher dashboard (schedule, earnings, booking requests)
-- Adaptive AI placement test mapping to CEFR levels
+- Real-time messaging and shared lesson materials
 
 ## License
 
