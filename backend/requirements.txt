@@ -1,0 +1,18 @@
+# Runtime dependencies for the Aula FastAPI backend.
+# pyproject.toml is the source of truth; this pinned file is provided for
+# environments that prefer `pip install -r requirements.txt`.
+#
+#   pip install -r requirements.txt
+#
+# For development tools (pytest, ruff, black, httpx) see requirements-dev.txt.
+
+fastapi==0.138.0
+uvicorn[standard]==0.49.0
+SQLAlchemy==2.0.51
+alembic==1.18.4
+psycopg2-binary==2.9.12
+pydantic==2.13.4
+pydantic-settings==2.14.2
+email-validator==2.3.0
+bcrypt==5.0.0
+python-jose[cryptography]==3.5.0
