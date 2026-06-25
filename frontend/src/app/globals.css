@@ -1,0 +1,112 @@
+@import "tailwindcss";
+
+/* Enable class-based dark mode (driven by next-themes) instead of the media default. */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/*
+ * Design tokens. Light values live in :root, dark values override them in .dark.
+ * Dark mode is therefore a pure token swap — components never restyle per theme.
+ */
+:root {
+  --canvas: #f5f6fa;
+  --surface: #ffffff;
+  --raised: #ffffff;
+  --border: #e6e8ef;
+  --ink: #15171e;
+  --muted: #6e7382;
+
+  --primary: #4b47e8;
+  --primary-700: #3a37c9;
+  --primary-50: #efeefd;
+  --on-primary: #ffffff;
+
+  --success: #0e9f6e;
+  --success-soft: #e6f6f0;
+  --warning: #c77700;
+  --warning-soft: #fbefd3;
+  --danger: #d64550;
+  --ring: #4b47e8;
+}
+
+.dark {
+  --canvas: #0f1116;
+  --surface: #181b22;
+  --raised: #1f232c;
+  --border: #2a2f3a;
+  --ink: #eaecf1;
+  --muted: #969caa;
+
+  --primary: #837ef2;
+  --primary-700: #5b57f0;
+  --primary-50: #23204f;
+  --on-primary: #15171e;
+
+  --success: #34c794;
+  --success-soft: #14342a;
+  --warning: #f0b860;
+  --warning-soft: #3a2e16;
+  --danger: #f0676f;
+  --ring: #837ef2;
+}
+
+/* Map tokens to Tailwind utilities (bg-primary, text-ink, border-border, …).
+   `inline` keeps the var() reference so .dark overrides flow through. */
+@theme inline {
+  --color-canvas: var(--canvas);
+  --color-surface: var(--surface);
+  --color-raised: var(--raised);
+  --color-border: var(--border);
+  --color-ink: var(--ink);
+  --color-muted: var(--muted);
+
+  --color-primary: var(--primary);
+  --color-primary-700: var(--primary-700);
+  --color-primary-50: var(--primary-50);
+  --color-on-primary: var(--on-primary);
+
+  --color-success: var(--success);
+  --color-success-soft: var(--success-soft);
+  --color-warning: var(--warning);
+  --color-warning-soft: var(--warning-soft);
+  --color-danger: var(--danger);
+  --color-ring: var(--ring);
+
+  --font-display: var(--font-schibsted), "Schibsted Grotesk", system-ui, sans-serif;
+  --font-sans: var(--font-hanken), "Hanken Grotesk", system-ui, sans-serif;
+  --font-mono: var(--font-jetbrains), "JetBrains Mono", ui-monospace, monospace;
+
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --radius-xl: 24px;
+}
+
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    background: var(--canvas);
+    color: var(--ink);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+  :focus-visible {
+    outline: 3px solid var(--ring);
+    outline-offset: 2px;
+    border-radius: 4px;
+  }
+  ::selection {
+    background: color-mix(in srgb, var(--primary) 22%, transparent);
+  }
+  /* Longer FR / LB headings wrap onto a balanced second line instead of clipping. */
+  h1,
+  h2,
+  h3 {
+    text-wrap: balance;
+  }
+}

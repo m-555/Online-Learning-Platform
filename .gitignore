@@ -1,0 +1,56 @@
+# ---- Environment & secrets ----
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# ---- Python / FastAPI backend ----
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+build/
+dist/
+.venv/
+venv/
+env/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+*.sqlite3
+*.db
+backend/aula.db
+
+# ---- Node / Next.js frontend ----
+node_modules/
+.next/
+out/
+.turbo/
+coverage/
+*.tsbuildinfo
+next-env.d.ts
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# ---- Editor / OS ----
+.vscode/
+.idea/
+*.swp
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ---- Working assets (not part of the shipped app) ----
+design/
+Design/
+
+# ---- Legacy Django artifacts kept locally but excluded from the repo ----
+/media/
+old_users.json
+*.docx
+
+# ---- Misc ----
+*.log
+_backup_history.bundle

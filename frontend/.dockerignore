@@ -1,0 +1,8 @@
+node_modules
+.next
+.git
+coverage
+npm-debug.log*
+.env*
+Dockerfile
+.dockerignore
