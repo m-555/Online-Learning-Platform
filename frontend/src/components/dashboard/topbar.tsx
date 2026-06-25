@@ -2,18 +2,12 @@
 
 import { useTranslations } from "next-intl";
 
-import { Avatar } from "@/components/ui/avatar";
+import { UserMenu } from "@/components/app/user-menu";
 import { LangSwitcher } from "@/components/ui/lang-switcher";
 import { SearchIcon } from "@/components/ui/icons";
 import { ThemeToggle } from "@/components/ui/theme-toggle";
 
-export function DashboardTopbar({
-  studentName,
-  avatarColor,
-}: {
-  studentName: string;
-  avatarColor: string;
-}) {
+export function DashboardTopbar({ avatarColor }: { studentName?: string; avatarColor: string }) {
   const t = useTranslations("common");
 
   return (
@@ -25,7 +19,7 @@ export function DashboardTopbar({
       <div className="flex items-center gap-2.5">
         <LangSwitcher />
         <ThemeToggle />
-        <Avatar name={studentName} color={avatarColor} size="sm" />
+        <UserMenu avatarColor={avatarColor} />
       </div>
     </div>
   );
