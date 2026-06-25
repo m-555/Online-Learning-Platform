@@ -1,6 +1,6 @@
 "use client";
 
-import { type ReactNode, useCallback, useEffect, useRef } from "react";
+import { type ReactNode, useEffect, useRef } from "react";
 import { createPortal } from "react-dom";
 
 import { cn } from "@/lib/cn";
@@ -20,11 +20,37 @@ export function Modal({ open, onClose, titleId, children, className }: ModalProp
   const dialogRef = useRef<HTMLDivElement>(null);
   const previouslyFocused = useRef<HTMLElement | null>(null);
 
-  const handleKeyDown = useCallback(
-    (e: KeyboardEvent) => {
+  // Keep the latest onClose without making it an effect dependency, so typing in
+  // the dialog never re-triggers the focus/scroll-lock setup below.
+  const onCloseRef = useRef(onClose);
+  useEffect(() => {
+    onCloseRef.current = onClose;
+  });
+
+  // Focus management + scroll lock — runs only when the dialog opens or closes.
+  useEffect(() => {
+    if (!open) return;
+
+    previouslyFocused.current = document.activeElement as HTMLElement | null;
+    dialogRef.current?.querySelector<HTMLElement>(FOCUSABLE)?.focus();
+
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+
+    return () => {
+      document.body.style.overflow = previousOverflow;
+      previouslyFocused.current?.focus();
+    };
+  }, [open]);
+
+  // Escape to close + Tab focus trap.
+  useEffect(() => {
+    if (!open) return;
+
+    function handleKeyDown(e: KeyboardEvent) {
       if (e.key === "Escape") {
         e.preventDefault();
-        onClose();
+        onCloseRef.current();
         return;
       }
       if (e.key !== "Tab" || !dialogRef.current) return;
@@ -36,37 +62,19 @@ export function Modal({ open, onClose, titleId, children, className }: ModalProp
 
       const first = focusable[0];
       const last = focusable[focusable.length - 1];
-      const active = document.activeElement;
 
-      if (e.shiftKey && active === first) {
+      if (e.shiftKey && document.activeElement === first) {
         e.preventDefault();
         last.focus();
-      } else if (!e.shiftKey && active === last) {
+      } else if (!e.shiftKey && document.activeElement === last) {
         e.preventDefault();
         first.focus();
       }
-    },
-    [onClose],
-  );
+    }
 
-  useEffect(() => {
-    if (!open) return;
-
-    previouslyFocused.current = document.activeElement as HTMLElement | null;
     document.addEventListener("keydown", handleKeyDown);
-    const { overflow } = document.body.style;
-    document.body.style.overflow = "hidden";
-
-    // Move focus into the dialog once it has mounted.
-    const focusTarget = dialogRef.current?.querySelector<HTMLElement>(FOCUSABLE);
-    focusTarget?.focus();
-
-    return () => {
-      document.removeEventListener("keydown", handleKeyDown);
-      document.body.style.overflow = overflow;
-      previouslyFocused.current?.focus();
-    };
-  }, [open, handleKeyDown]);
+    return () => document.removeEventListener("keydown", handleKeyDown);
+  }, [open]);
 
   if (!open || typeof document === "undefined") return null;
 
